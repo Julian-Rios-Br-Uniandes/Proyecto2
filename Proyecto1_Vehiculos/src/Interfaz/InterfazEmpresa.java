@@ -19,6 +19,8 @@ public class InterfazEmpresa extends JFrame {
 	private VistaNuevaCuenta vistaNuevaCuenta;
 	private VistaMenuCliente vistaMenuCliente;
 	
+//	holaaaa
+	
 	public InterfazEmpresa(){
 		
 		BorderLayout bl = new BorderLayout();
