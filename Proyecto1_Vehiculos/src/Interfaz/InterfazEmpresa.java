@@ -19,7 +19,7 @@ public class InterfazEmpresa extends JFrame {
 	private VistaNuevaCuenta vistaNuevaCuenta;
 	private VistaMenuCliente vistaMenuCliente;
 	
-//	holaaaa
+//	holaa
 	
 	public InterfazEmpresa(){
 		
