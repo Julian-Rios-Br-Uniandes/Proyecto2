@@ -2,39 +2,38 @@ package Logica;
 
 public abstract class Usuario {
 
-	private String usuario;
-	private String contraseña;
-	private String nombre;
-	
-	public Usuario(String usuario, String contraseña, String nombre) {
-		super();
-		this.usuario = usuario;
-		this.contraseña = contraseña;
-		this.nombre = nombre;
-	}
+    private String usuario;
+    private String contraseña;
+    private String nombre;
 
-	public String getUsuario() {
-		return usuario;
-	}
+    public Usuario(String usuario, String contraseña, String nombre) {
+        super();
+        this.usuario = usuario;
+        this.contraseña = contraseña;
+        this.nombre = nombre;
+    }
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
+    public String getUsuario() {
+        return usuario;
+    }
 
-	public String getContraseña() {
-		return contraseña;
-	}
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
 
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
-	}
+    public String getContraseña() {
+        return contraseña;
+    }
 
-	public String getNombre() {
-		return nombre;
-	}
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }

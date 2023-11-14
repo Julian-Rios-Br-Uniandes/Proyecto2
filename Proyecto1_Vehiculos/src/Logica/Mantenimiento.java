@@ -1,13 +1,15 @@
 package Logica;
 
-public class Mantenimiento {
+import java.sql.Date;
+
+public class Mantenimiento extends Estado {
 
 	private String taller;
 	private String descripcion;
 	private Empleado reportador;
 	
-	public Mantenimiento(String taller, String descripcion, Empleado reportador) {
-		super();
+	public Mantenimiento(Sede sede, Date fecha,String taller, String descripcion, Empleado reportador) {
+		super(sede, fecha);
 		this.taller = taller;
 		this.descripcion = descripcion;
 		this.reportador = reportador;

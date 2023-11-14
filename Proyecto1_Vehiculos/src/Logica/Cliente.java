@@ -1,6 +1,7 @@
 package Logica;
 import java.io.File;
 import java.sql.Date;
+import java.util.ArrayList;
 
 public class Cliente extends Usuario{
 	
@@ -10,6 +11,8 @@ public class Cliente extends Usuario{
 	private DatosContacto datosContacto;
 	private DatosLicencia datosLicencia;
 	private DatosPago datosPago;
+	private ArrayList<Reserva> reservas;
+	private ArrayList<Alquiler> alquileres;
 	
 	public Cliente(String usuario, String contraseña, String nombre, Date fechaNacimiento, String nacionalidad,
 			File imagenID, DatosContacto datosContacto, DatosLicencia datosLicencia, DatosPago datosPago) {
@@ -20,6 +23,8 @@ public class Cliente extends Usuario{
 		this.datosContacto = datosContacto;
 		this.datosLicencia = datosLicencia;
 		this.datosPago = datosPago;
+		reservas = new ArrayList<Reserva>();
+		alquileres = new ArrayList<Alquiler>();
 	}
 
 	public Date getFechaNacimiento() {
@@ -70,6 +75,31 @@ public class Cliente extends Usuario{
 		this.datosPago = datosPago;
 	}
 	
+	public ArrayList<Reserva> getReservas(){
+		return reservas;
+	}
 	
+	public void crearReserva (Date fechaRecogida, Date fechaEntrega, double tarifa, Categoria categoria,
+			Sede sedeRecogida, Sede sedeEntrega) {
+		Reserva nuevaReserva = new Reserva(fechaRecogida, fechaEntrega, tarifa, this, categoria, sedeRecogida, sedeEntrega);
+		reservas.add(nuevaReserva);
+		sedeEntrega.agregarReservaPendiente(nuevaReserva);
+	}
+	
+	public void modificarReserva(Reserva reserva, Date nuevaFecha) {
+		reserva.setFechaEntrega(nuevaFecha);
+	}
+	
+	public void eliminarReserva(Reserva reserva) {
+		reservas.remove(reservas.indexOf(reserva));
+	}
 
+	public ArrayList<Alquiler> getAlquileres(){
+		return alquileres;
+	}
+	
+	public void agregarAlquiler(Alquiler alquiler) {
+		alquileres.add(alquiler);
+	}
+	
 }

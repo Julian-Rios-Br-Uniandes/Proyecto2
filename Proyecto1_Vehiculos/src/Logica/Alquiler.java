@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Alquiler extends Estado{
 
+	private Cliente cliente;
 	private Date fechaEntrega;
 	private double tarifa;
 	private Sede sedeEntrega;
@@ -11,10 +12,12 @@ public class Alquiler extends Estado{
 	private Seguro seguro;
 	private ArrayList<Conductor> conductoresAdicionales;
 	
-	public Alquiler(Sede sede, Date fechaEntrega, double tarifa, Sede sedeEntrega, Vehiculo vehiculo, Seguro seguro,
-			ArrayList<Conductor> conductoresAdicionales) {
-		super(sede);
+	public Alquiler( Cliente cliente, Sede sede, Date fechaEntrega, Sede sedeEntrega, Vehiculo vehiculo, Seguro seguro,
+			ArrayList<Conductor> conductoresAdicionales, Date fecha) {
+		super(sede, fechaEntrega);
+		this.cliente = cliente;
 		this.fechaEntrega = fechaEntrega;
+//		###########3 modificar tarifa
 		this.tarifa = tarifa;
 		this.sedeEntrega = sedeEntrega;
 		this.vehiculo = vehiculo;
@@ -68,6 +71,14 @@ public class Alquiler extends Estado{
 
 	public void setConductoresAdicionales(ArrayList<Conductor> conductoresAdicionales) {
 		this.conductoresAdicionales = conductoresAdicionales;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 	
 }

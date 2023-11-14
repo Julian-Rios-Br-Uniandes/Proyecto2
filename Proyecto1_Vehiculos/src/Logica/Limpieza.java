@@ -1,12 +1,14 @@
 package Logica;
 
+import java.sql.Date;
+
 public class Limpieza extends Estado{
 
 	private String descripcion;
 	private Empleado limpiador;
 	
-	public Limpieza(Sede sede, String descripcion, Empleado limpiador) {
-		super(sede);
+	public Limpieza(Sede sede, String descripcion, Empleado limpiador, Date fecha) {
+		super(sede, fecha);
 		this.descripcion = descripcion;
 		this.limpiador = limpiador;
 	}

@@ -4,12 +4,14 @@ public class Conductor extends Usuario {
 
 	private DatosContacto datosContacto;
 	private DatosLicencia datosLicencia;
+	private Vehiculo vehiculo;
 	
 	public Conductor(String usuario, String contraseña, String nombre, DatosContacto datosContacto,
-			DatosLicencia datosLicencia) {
+			DatosLicencia datosLicencia, Vehiculo vehiculo) {
 		super(usuario, contraseña, nombre);
 		this.datosContacto = datosContacto;
 		this.datosLicencia = datosLicencia;
+		this.vehiculo = vehiculo;
 	}
 
 	public DatosContacto getDatosContacto() {
@@ -26,6 +28,14 @@ public class Conductor extends Usuario {
 
 	public void setDatosLicencia(DatosLicencia datosLicencia) {
 		this.datosLicencia = datosLicencia;
+	}
+
+	public Vehiculo getVehiculo() {
+		return vehiculo;
+	}
+
+	public void setVehiculo(Vehiculo vehiculo) {
+		this.vehiculo = vehiculo;
 	}
 
 }

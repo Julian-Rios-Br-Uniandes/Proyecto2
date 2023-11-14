@@ -8,6 +8,7 @@ public class Categoria {
 	private double tarifaBaja;
 	private double extraSede;
 	private double extraConductor;
+	
 	public Categoria(String nombre, String gamma, double tarifaAlta, double tarifaBaja, double extraSede,
 			double extraConductor) {
 		super();

@@ -1,4 +1,7 @@
 package Logica;
+
+import java.util.ArrayList;
+
 public class Vehiculo {
 
 	private String placa;
@@ -9,9 +12,10 @@ public class Vehiculo {
 	private int capacidad;
 	private Categoria categoria;
 	private Estado estadoActual;
+	private ArrayList<Estado> estados;
 	
 	public Vehiculo(String placa, String marca, String modelo, String color, String tipoTransmision, int capacidad,
-			Categoria categoria, Estado estadoActual) {
+			Categoria categoria) {
 		super();
 		this.placa = placa;
 		this.marca = marca;
@@ -20,7 +24,7 @@ public class Vehiculo {
 		this.tipoTransmision = tipoTransmision;
 		this.capacidad = capacidad;
 		this.categoria = categoria;
-		this.estadoActual = estadoActual;
+		estados = new ArrayList<Estado>();
 	}
 
 	public String getPlaca() {
@@ -87,4 +91,11 @@ public class Vehiculo {
 		this.estadoActual = estadoActual;
 	}
 	
+	public ArrayList<Estado> getEstados(){
+		return estados;
+	}
+	
+	public void añadirEstado(Estado estado) {
+		estados.add(estado);
+	}
 }
