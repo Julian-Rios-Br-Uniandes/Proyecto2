@@ -76,7 +76,7 @@ public class VistaModVehiculo extends JPanel implements ActionListener {
 		
 		g2d.setFont(k);
 		
-		g2d.drawString("Nuevo Vehiculo", 770, 173);
+		g2d.drawString("Nuevo Vehiculo", 771, 173);
 		
 		Font m =new Font("Microsoft YaHei", Font.PLAIN, 20);
 		g2d.setFont(m);
